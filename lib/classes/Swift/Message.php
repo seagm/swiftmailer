@@ -44,7 +44,7 @@ class Swift_Message extends Swift_Mime_SimpleMessage
     {
         $dependencies = Swift_DependencyContainer::getInstance()
             ->createDependenciesFor('mime.message');
-        parent::toByteStream(...$dependencies);
+        parent::__construct(...$dependencies);
 
         if (!isset($charset)) {
             $charset = Swift_DependencyContainer::getInstance()
